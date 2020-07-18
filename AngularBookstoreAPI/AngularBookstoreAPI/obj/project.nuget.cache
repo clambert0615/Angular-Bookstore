@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T8LuegiYnvCchyR9FaJGft/kVF7WdwfTHpYw2fOiozh01nDTA7qjGw/7nRfdrKvKcP3Ky4KYxFEPeb1D1NDJ2Q==",
+  "dgSpecHash": "HvEhjq/zfdGzrQd7YJC4LZfARqG0BnSeQYyWIH/PS1A9sw6ynX4kP0kbXD9oz8JsWY8ZUOtxoNmzD96luGi79w==",
   "success": true,
-  "projectFilePath": "C:\\Grandcircus\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj",
+  "projectFilePath": "C:\\Grandcircus\\bookfrontend\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cbele\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\cbele\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

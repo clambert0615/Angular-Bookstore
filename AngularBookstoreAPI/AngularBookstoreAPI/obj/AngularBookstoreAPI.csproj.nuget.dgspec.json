@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Grandcircus\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj": {}
+    "C:\\Grandcircus\\bookfrontend\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj": {}
   },
   "projects": {
-    "C:\\Grandcircus\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj": {
+    "C:\\Grandcircus\\bookfrontend\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Grandcircus\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj",
+        "projectUniqueName": "C:\\Grandcircus\\bookfrontend\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj",
         "projectName": "AngularBookstoreAPI",
-        "projectPath": "C:\\Grandcircus\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj",
+        "projectPath": "C:\\Grandcircus\\bookfrontend\\AngularBookstoreAPI\\AngularBookstoreAPI\\AngularBookstoreAPI.csproj",
         "packagesPath": "C:\\Users\\cbele\\.nuget\\packages\\",
-        "outputPath": "C:\\Grandcircus\\AngularBookstoreAPI\\AngularBookstoreAPI\\obj\\",
+        "outputPath": "C:\\Grandcircus\\bookfrontend\\AngularBookstoreAPI\\AngularBookstoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
