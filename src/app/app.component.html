@@ -1,139 +1,21 @@
-<div class="container">  
-    
-  <form [formGroup]="BookForm" (ngSubmit)="this[EventValue]()">  
-      
-      <h3>Book Table CRUD Operation</h3>  
-      <div class="row">  
-           
-      <table class="table">  
-      <tr>  
-        <td>Title</td>  
-        <td>  
-          <input type="hidden" formControlName="Id">  
-          <input type="text" formControlName="Title">  
-          <div *ngIf="submitted && BookForm.controls.Title.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.Title.errors.required">Title is required</div>  
-          </div>   
-        </td>  
-      </tr>  
-        
-      <tr>  
-        <td>Author</td>  
-        <td><input type="text" formControlName="Author">  
-          <div *ngIf="submitted && BookForm.controls.Author.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.Author.errors.required">Author is required</div>  
-          </div>   
-        </td>  
-      </tr>  
-      <tr>  
-        <td>Publish Date</td>  
-        <td>  
-          <input type="date" formControlName="PublishDate">  
-          <div *ngIf="submitted && BookForm.controls.PublishDate.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.PublishDate.errors.required">Publish Date is required</div>  
-          </div>  
-        </td>  
-      </tr>  
-     
-      <tr>  
-        <td>Pages</td>  
-        <td>  
-          <input type="number" formControlName="Pages">  
-          <div *ngIf="submitted && BookForm.controls.Pages.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.Pages.errors.required">Pages is required</div>  
-          </div>  
-            
-        </td>  
-      </tr>  
-      <tr>  
-        <td>Genre</td>  
-        <td>  
-          <input type="text" formControlName="Genre">  
-          <div *ngIf="submitted && BookForm.controls.Genre.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.Genre.errors.required">Genre is required</div>  
-          </div>  
-            
-        </td>  
-      </tr>  
-      <tr>  
-        <td>Price</td>  
-        <td>  
-          <input type="number" formControlName="Price">  
-          <div *ngIf="submitted && BookForm.controls.Price.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.Price.errors.required">Price is required</div>  
-          </div>  
-            
-        </td>  
-      </tr>  
-      <tr>  
-        <td>Image</td>  
-        <td>  
-          <input type="text" formControlName="Image">  
-          <div *ngIf="submitted && BookForm.controls.Image.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.Image.errors.required">Image is required</div>  
-          </div>  
-            
-        </td>  
-      </tr>  
-      <tr>  
-        <td>Description</td>  
-        <td>  
-          <input type="text" formControlName="Description">  
-          <div *ngIf="submitted && BookForm.controls.Description.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.Description.errors.required">Description is required</div>  
-          </div>  
-            
-        </td>  
-      </tr>
-      
-      <tr>  
-        <td>Quantity</td>  
-        <td>  
-          <input type="number" formControlName="Quantity">  
-          <div *ngIf="submitted && BookForm.controls.Quantity.errors" class="text-danger">  
-            <div *ngIf="BookForm.controls.Quantity.errors.required">Quantity is required</div>  
-          </div>  
-            
-        </td>  
-      </tr>  
-      <tr>  
-    
-        <td colspan="2">  
-          <button type="submit" class="btn btn-primary">{{EventValue}}</button>  
-        </td>  
-      </tr>  
-        
-    </table>  
-    </div>  
-       
-   <div class="row">  
-    <table class="table table-striped">  
-      <tr>  
-        <td>Id</td>  
-        <td>Image</td>  
-          
-        <td>Title</td>  
-        <td>Author</td>  
-        <td>Edit</td>  
-        <td>Delete</td>  
-      </tr>  
-    
-      <tr *ngFor="let d of data">  
-        <td>{{d.id}}</td>  
-        <td><img src="{{d.image}}"></td>  
-         
-        <td>{{d.title}}</td>  
-        <td>{{d.author}}</td>  
-        
-        <td><a (click)="EditData(d.id, d)">Edit</a></td>  
-        <td><a (click)="deleteData(d.id)">Delete</a></td>    
-      </tr>  
-    </table>  
-  </div>  
-  </form>  
-    
-  </div>  
+
+  
+      <ul>
+          <li><a routerLink="adminmenu">Admin Menu</a></li>
+          <li><a routerLink="bookinventory">Book Inventory</a></li>
+          <li><a routerLink="addbook">Add Book</a></li>
+      </ul>
+ 
 
 
+<!--
+<div>
+  <button type="button" class="btn" (click)="navigateToInventory()">Book Inventory</button>
+</div>
+<div>
+  <button type="button" class="btn" (click)="navigateToAddBook()">Add new book</button>
+</div>
+
+-->
 
 <router-outlet></router-outlet>

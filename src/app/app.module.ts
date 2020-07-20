@@ -8,10 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import {ServiceService} from './service.service';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BookinventoryComponent } from './bookinventory/bookinventory.component';
+import { AddbookComponent } from './addbook/addbook.component';
+import { AdminmenuComponent } from './adminmenu/adminmenu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BookinventoryComponent,
+    AddbookComponent,
+    AdminmenuComponent
   ],
   imports: [
     BrowserModule,

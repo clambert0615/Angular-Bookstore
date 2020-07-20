@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
 namespace AngularBookstoreAPI.Models
 {
@@ -9,20 +10,21 @@ namespace AngularBookstoreAPI.Models
         public BookstoreAPIDbContext()
         {
         }
-
-        public BookstoreAPIDbContext(DbContextOptions<BookstoreAPIDbContext> options)
+    public IConfiguration Configuration { get; }
+    public BookstoreAPIDbContext(DbContextOptions<BookstoreAPIDbContext> options, IConfiguration configuration)
             : base(options)
         {
+      Configuration = configuration;
         }
 
         public virtual DbSet<Books> Books { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder )
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=BookstoreAPIDb;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer(Configuration.GetConnectionString("Connection"));
             }
         }
 

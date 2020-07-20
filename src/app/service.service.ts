@@ -21,6 +21,7 @@ constructor(private http: HttpClient) { }
   }
   // tslint:disable-next-line: typedef
   postData(formData){
+    console.log(formData)
     return this.http.post('https://localhost:44335/api/books', formData);
   }
   // tslint:disable-next-line: typedef

@@ -1,0 +1,105 @@
+<form [formGroup]="BookForm" (ngSubmit)="Save()">  
+
+    <div class="row">  
+             
+      <table class="table">  
+      <tr>  
+        <td>Title</td>  
+        <td>  
+          <input type="hidden" formControlName="Id">  
+          <input type="text" formControlName="Title">  
+          <div *ngIf="submitted && BookForm.controls.Title.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.Title.errors.required">Title is required</div>  
+          </div>   
+        </td>  
+      </tr>  
+        
+      <tr>  
+        <td>Author</td>  
+        <td><input type="text" formControlName="Author">  
+          <div *ngIf="submitted && BookForm.controls.Author.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.Author.errors.required">Author is required</div>  
+          </div>   
+        </td>  
+      </tr>  
+      <tr>  
+        <td>Publish Date</td>  
+        <td>  
+          <input type="date" formControlName="PublishDate">  
+          <div *ngIf="submitted && BookForm.controls.PublishDate.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.PublishDate.errors.required">Publish Date is required</div>  
+          </div>  
+        </td>  
+      </tr>  
+     
+      <tr>  
+        <td>Pages</td>  
+        <td>  
+          <input type="number" formControlName="Pages">  
+          <div *ngIf="submitted && BookForm.controls.Pages.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.Pages.errors.required">Pages is required</div>  
+          </div>  
+            
+        </td>  
+      </tr>  
+      <tr>  
+        <td>Genre</td>  
+        <td>  
+          <input type="text" formControlName="Genre">  
+          <div *ngIf="submitted && BookForm.controls.Genre.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.Genre.errors.required">Genre is required</div>  
+          </div>  
+            
+        </td>  
+      </tr>  
+      <tr>  
+        <td>Price</td>  
+        <td>  
+          <input type="number" formControlName="Price">  
+          <div *ngIf="submitted && BookForm.controls.Price.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.Price.errors.required">Price is required</div>  
+          </div>  
+            
+        </td>  
+      </tr>  
+      <tr>  
+        <td>Image</td>  
+        <td>  
+          <input type="text" formControlName="Image">  
+          <div *ngIf="submitted && BookForm.controls.Image.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.Image.errors.required">Image is required</div>  
+          </div>  
+            
+        </td>  
+      </tr>  
+      <tr>  
+        <td>Description</td>  
+        <td>  
+          <input type="text" formControlName="Description">  
+          <div *ngIf="submitted && BookForm.controls.Description.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.Description.errors.required">Description is required</div>  
+          </div>  
+            
+        </td>  
+      </tr>
+      
+      <tr>  
+        <td>Quantity</td>  
+        <td>  
+          <input type="number" formControlName="Quantity">  
+          <div *ngIf="submitted && BookForm.controls.Quantity.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.Quantity.errors.required">Quantity is required</div>  
+          </div>  
+            
+        </td>  
+      </tr>  
+      <tr>  
+    
+        <td colspan="2">  
+          <button type="submit" class="btn btn-primary">Save</button>  
+        </td>  
+      </tr>  
+        
+    </table>  
+    </div>  
+  </form>
