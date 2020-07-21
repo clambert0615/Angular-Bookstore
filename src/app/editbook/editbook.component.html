@@ -1,0 +1,81 @@
+
+<form [formGroup]="BookForm" (ngSubmit)="editData(BookForm.value)">  
+
+    <div class="form-group">  
+      <label>Title</label>       
+           <input type="text" class="form-control" formControlName="title" required>  
+           <input type="number" formControlName="id">
+          <div *ngIf="BookForm.controls.title.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.title.errors.required">Title is required</div>  
+          </div>   
+        </div>
+
+        <div class="form-group">
+        <label>Author</label>  
+        <input type="text" formControlName="author" required>  
+          <div *ngIf="BookForm.controls.author.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.author.errors.required">Author is required</div>  
+          </div>
+        </div>   
+        
+      <div class="form-group">  
+        <label>Publish Date</label>  
+         <input type="date" formControlName="publishDate" required>  
+          <div *ngIf="BookForm.controls.publishDate.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.publishDate.errors.required">Publish Date is required</div>  
+          </div>  
+        </div>
+      
+        <div class="form-group">
+        <label>Pages</label>  
+         <input type="number" formControlName="pages" required>  
+          <div *ngIf="BookForm.controls.pages.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.pages.errors.required">Pages is required</div>  
+          </div>  
+        </div> 
+       
+        <div class="form-group">
+        <label>Genre</label>  
+          <input type="text" formControlName="genre" required>  
+          <div *ngIf="BookForm.controls.genre.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.genre.errors.required">Genre is required</div>  
+          </div>  
+        </div>
+      
+        <div class="form-group">
+        <label>Price</label>  
+          <input type="number" formControlName="price">  
+          <div *ngIf="BookForm.controls.price.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.price.errors.required">Price is required</div>  
+          </div>  
+        </div>
+
+
+       <div class="form-group">  
+        <label>Image</label>  
+          <input type="text" formControlName="image" required>  
+          <div *ngIf="BookForm.controls.image.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.image.errors.required">Image is required</div>  
+          </div>  
+        </div>
+       
+        <div class="form-group">
+        <label>Description</label>  
+          <input type="text" formControlName="description" required>  
+          <div *ngIf="BookForm.controls.description.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.description.errors.required">Description is required</div>  
+          </div>  
+        </div> 
+      
+        <div class="form-group">
+        <label>Quantity</label>  
+          <input type="number" formControlName="quantity" required>  
+          <div *ngIf="BookForm.controls.quantity.errors" class="text-danger">  
+            <div *ngIf="BookForm.controls.quantity.errors.required">Quantity is required</div>  
+          </div>  
+        </div>
+     
+          <button type="submit" class="btn btn-primary">Update</button>  
+        </form>
+
+    

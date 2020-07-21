@@ -107,26 +107,28 @@
   </div>  
 </form>
   <div class="row">  
-    <table class="table table-striped" style="width:100%">  
-      <tr>  
-        <td>Id</td>  
-        <td>Image</td>  
+    <table class="table table-striped" style="width:100%">
+       <tr>  
+        <th style="text-align:left; width:150px">Id</th>  
+        <th style="text-align:left">Image</th>  
           
-        <td>Title</td>  
-        <td>Author</td>  
-        <td>Edit</td>  
-        <td>Delete</td>  
+        <th style="text-align:left">Title</th>  
+        <th style="text-align:left">Author</th>  
+        <th style="text-align:left">Edit</th>  
+        <th style="text-align:left">Delete</th>  
+        <th style="text-align:left">Product Details</th>
       </tr>  
     
       <tr *ngFor="let d of data">  
         <td>{{d.id}}</td>  
-        <td><img src="{{d.image}}" style="width:100px"></td>  
+        <td><img src="{{d.image}}" style="width:80px; height:120px"></td>  
          
         <td>{{d.title}}</td>  
         <td>{{d.author}}</td>  
         
-        <td><button type="button" (click)="EditData(d.id, d); showform();">Edit in form above</button></td>  
-        <td><button type="button" (click)="deleteData(d.id)">Delete</button></td>    
+        <td><button type="button" (click)="getNavigation2('editbook', d.id)">Edit</button></td>  
+        <td><button type="button" (click)="deleteData(d.id)">Delete</button></td>   
+        <td><button type="button" class="btn btn-success" (click)="getNavigation('bookdetails', d.id)">View</button></td> 
       </tr>  
     </table>  
   </div>  

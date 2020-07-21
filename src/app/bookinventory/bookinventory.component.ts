@@ -104,6 +104,21 @@ navigateToInventory(){
   this._router.navigate(['/bookinventory']);
 }
 showform(){
-  document.getElementById('form1').style.display='block';
+  document.getElementById('form1').style.display = 'block';
 }
+getNavigation(link, id){
+  if(id === ''){
+      this._router.navigate([link]);
+  } else {
+      this._router.navigate([link + '/' + id]);
+  }
+}
+getNavigation2(link, id){
+  if(id === ''){
+      this._router.navigate([link]);
+  } else {
+      this._router.navigate([link + '/' + id]);
+  }
+}
+
 }
