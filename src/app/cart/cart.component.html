@@ -1,0 +1,101 @@
+<h1 style="text-align:center">Cart</h1>
+
+<div class="cart-item" *ngFor="let item of items">
+    <span>{{item.title}} &nbsp; {{item.price|currency}}</span>
+    
+</div>
+<br>
+<b>Subtotal:</b> $<span id="subtotal"></span> <br>
+<b>Tax:</b> $<span id="tax"></span><br>
+<b>Total:</b> $<span id="total"></span><br>
+<br>
+<div class="container">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div class="row">
+        <div class="col-25">
+        <label for="creditNumber"> Credit Card Number: </label>
+        </div>
+        <div class="col-75">
+        <input id="creditNumber" type="number" formControlName="creditNumber">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="expirMonth"> Expiration Month: </label>
+    </div>
+    <div class="col-75">
+        <input id="expirMonth" type="number" formControlName="expirMonth">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="expirYear"> Expiration Year: </label>
+    </div>
+    <div class="col-75">
+        <input id="expirYear" type="number" formControlName="expirYear">
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="ccvNumber"> CCV Number: </label>
+    </div>
+    <div class="col-75">
+        <input id="ccvNumber" type="number" formControlName="ccvNumber">
+    </div> 
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="name"> Name: </label>
+    </div>
+    <div class="col-75">
+        <input id="name" type="text" formControlName="name">
+    </div>  
+</div>
+<div class="row">
+    <div class="col-25">
+        <label for="streetAddress"> Street Address: </label>
+    </div>
+    <div class="col-75">
+        <input id="streetAddress" type="text" formControlName="streetAddress">
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="city"> City: </label>
+    </div>
+    <div class="col-75">
+        <input id="city" type="text" formControlName="city">
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="state"> State: </label>
+    </div>
+    <div class="col-75">
+        <input id="state" type="text" formControlName="state">
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="zip"> Zip: </label>
+    </div>
+    <div class="col-75">
+        <input id="zip" type="number" formControlName="zip">
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="email"> email: </label>
+    </div>
+    <div class="col-75">
+        <input id="email" type="text" formControlName="email">
+    </div>
+    </div>    
+
+    <button class="button" type="submit">Complete Order</button>
+  
+  </form>
+</div>
+<div class="container2">
+  <img src="/assets/img/cart.jpg" style="width:40%">
+</div>

@@ -4,7 +4,7 @@
     <div class="form-group">  
       <label>Title</label>       
            <input type="text" class="form-control" formControlName="title" required>  
-           <input type="number" formControlName="id">
+           <input type="hidden" formControlName="id">
           <div *ngIf="BookForm.controls.title.errors" class="text-danger">  
             <div *ngIf="BookForm.controls.title.errors.required">Title is required</div>  
           </div>   
@@ -74,8 +74,9 @@
             <div *ngIf="BookForm.controls.quantity.errors.required">Quantity is required</div>  
           </div>  
         </div>
-     
+     <br>
           <button type="submit" class="btn btn-primary">Update</button>  
+          <button type="button" routerLink="/bookinventory">Back to Inventory</button>
         </form>
 
     

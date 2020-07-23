@@ -1,0 +1,16 @@
+
+<br>
+<div *ngIf="data">
+  <h1>{{ data.title}}</h1>
+    <img src={{data.image}} style="width:150px; height:200px">
+  
+   <h3>Author: {{data.author}}</h3> 
+  <h3>Price: {{ data.price | currency }}</h3>
+  <p><b>Pages: </b>{{data.pages}}</p>
+  <p><b>Publish Date: </b>{{data.publishDate | date}}</p>
+  <p><b>Genre: </b>{{data.genre}}</p>
+  <p><b>Description: </b>{{ data.description }}</p>
+
+<button (click) ="addToCart(data)">Add to Cart</button>
+<button type="button" routerLink="/customermenu">Back to Results</button>
+</div>

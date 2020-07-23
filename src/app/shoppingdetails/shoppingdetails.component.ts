@@ -2,16 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import {ServiceService} from './../service.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../cart.service';
 
 @Component({
-  selector: 'app-bookdetails',
-  templateUrl: './bookdetails.component.html',
-  styleUrls: ['./bookdetails.component.css']
+  selector: 'app-shoppingdetails',
+  templateUrl: './shoppingdetails.component.html',
+  styleUrls: ['./shoppingdetails.component.css']
 })
-export class BookdetailsComponent implements OnInit {
+export class ShoppingdetailsComponent implements OnInit {
 
   constructor(public ServiceService: ServiceService, public _router: Router,
-              private actRoute: ActivatedRoute) { }
+    private actRoute: ActivatedRoute, private cartService: CartService) { }
+  
   data: any;
   id: any;
   ngOnInit(): void {
@@ -24,5 +26,9 @@ export class BookdetailsComponent implements OnInit {
       console.log(data);
    });
   }
-
+  addToCart(book)
+  {
+    this.cartService.addToCart(book);
+    window.alert('Your product has been added to the cart!');
+  }
 }

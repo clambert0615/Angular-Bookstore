@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceService} from './../service.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/render3/view/util';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AddbookComponent implements OnInit {
 
-  constructor(public ServiceService: ServiceService, public _router: Router) { }
+  constructor(private ServiceService: ServiceService, private _router: Router) { }
   data: any;
   BookForm: FormGroup;
   submitted = false;
@@ -42,14 +41,8 @@ export class AddbookComponent implements OnInit {
    });
   
  }
-deleteData(id) {
-  console.log("deleteData called");
-  console.log(id);
-  this.ServiceService.deleteData(id).subscribe((data: any[]) => {
-    this.data = data;
-    this.getdata();
-  });
-}
+
+
 Save() {
   console.log("Save data called");
   
@@ -64,35 +57,6 @@ Save() {
 
   });
 }
-Update() {
-  this.submitted = true;
-
-  if (this.BookForm.invalid) {
-   return;
-  }
-  console.log(this.BookForm);
-  this.ServiceService.putData(this.BookForm.value.Id, this.BookForm.value).subscribe((data: any[]) => {
-    this.data = data;
-    this.resetFrom();
-  });
-}
-
-EditData(Id, Data) {
-  console.log("Edit data called");
-  console.log(Data);
-  this.BookForm.controls['Id'].setValue(Id);
-  this.BookForm.controls['Title'].setValue(Data.Title);
-  this.BookForm.controls['Author'].setValue(Data.Author);
-  this.BookForm.controls['PublishDate'].setValue(Data.PublishDate);
-  this.BookForm.controls['Pages'].setValue(Data.Pages);
-  this.BookForm.controls['Genre'].setValue(Data.Genre);
-  this.BookForm.controls['Price'].setValue(Data.Price);
-  this.BookForm.controls['Image'].setValue(Data.Image);
-  this.BookForm.controls['Description'].setValue(Data.Description);
-  this.BookForm.controls['Quantity'].setValue(Data.Quantity);
-  this.EventValue = 'Update';
-}
-
 resetFrom()
 {
   this.getdata();
@@ -100,10 +64,5 @@ resetFrom()
   this.EventValue = 'Save';
   this.submitted = false;
 }
-navigateToInventory(){
-  this._router.navigate(['/bookinventory']);
-}
-showform(){
-  document.getElementById('form1').style.display='block';
-}
+
 }

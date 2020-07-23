@@ -1,0 +1,23 @@
+<h1 style="text-align:center">Welcoome to CML Bookstore</h1>
+
+<table class="table table-striped" style="width:100%">
+    <tr>  
+     <th style="text-align:left; width:150px">Id</th>  
+     <th style="text-align:left">Image</th>  
+       
+     <th style="text-align:left">Title</th>  
+     <th style="text-align:left">Author</th>  
+     <th style="text-align:left">Product Details</th>
+   </tr>  
+ 
+   <tr *ngFor="let d of data">  
+     <td>{{d.id}}</td>  
+     <td><img src="{{d.image}}" style="width:80px; height:120px"></td>  
+      
+     <td>{{d.title}}</td>  
+     <td>{{d.author}}</td>  
+     
+      
+     <td><button type="button" class="btn btn-success" (click)="getNavigation('shoppingdetails', d.id)">View</button></td> 
+   </tr>  
+ </table>  

@@ -6,7 +6,9 @@ import {AppComponent } from './app.component';
 import {AdminmenuComponent} from './adminmenu/adminmenu.component';
 import {BookdetailsComponent } from './bookdetails/bookdetails.component';
 import {EditbookComponent } from './editbook/editbook.component';
-
+import {CustomermenuComponent} from './customermenu/customermenu.component';
+import { ShoppingdetailsComponent } from './shoppingdetails/shoppingdetails.component';
+import {CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
  { path: 'bookinventory', component: BookinventoryComponent},
@@ -14,7 +16,10 @@ const routes: Routes = [
  { path: 'adminmenu', component: AdminmenuComponent},
  { path: 'bookdetails/:id', component: BookdetailsComponent},
  { path: 'editbook/:id', component: EditbookComponent},
- {path: '', redirectTo: 'adminmenu', pathMatch: 'full'}
+ { path: 'customermenu', component: CustomermenuComponent},
+ { path: 'shoppingdetails/:id', component: ShoppingdetailsComponent},
+ { path: 'cart', component: CartComponent},
+ {path: '', redirectTo: 'customermenu', pathMatch: 'full'}
 ];
 
 @NgModule({
